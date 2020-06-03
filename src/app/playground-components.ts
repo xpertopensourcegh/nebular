@@ -464,6 +464,17 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
     ],
   },
   {
+    path: 'timepicker',
+    children: [
+      {
+        path: 'timepicker-showcase.component',
+        link: '/timepicker/timepicker-showcase.component',
+        component: 'TimepickerShowcaseComponent',
+        name: 'Timepicker Showcase',
+      },
+    ],
+  },
+  {
     path: 'dialog',
     children: [
       {

@@ -1,0 +1,47 @@
+<nb-card *nbPortal class="nb-time-picker-container">
+  <nb-card-header class="column-header">
+    <div class="text-hint">Hr</div>
+    <div class="text-hint">Min</div>
+    <div class="text-hint">{{ isTwelveHoursFormat ? 'Am/Pm': 'Sec' }}</div>
+  </nb-card-header>
+  <nb-list class="values-list">
+    <nb-list-item
+      class="list-item"
+      [class.selected]="item === getSelectedTime.hour"
+      *ngFor="let item of hoursColumnOptions">
+      <nb-timepicker-cell
+        [value]="item"
+        [type]="hour"
+        (select)="select($event)">
+      </nb-timepicker-cell>
+    </nb-list-item>
+  </nb-list>
+  <nb-list class="values-list">
+    <nb-list-item
+      class="list-item"
+      [class.selected]="item === getSelectedTime.minute"
+      *ngFor="let item of minutesColumnOptions">
+      <nb-timepicker-cell
+        [value]="item"
+        [type]="minute"
+        (select)="select($event)">
+      </nb-timepicker-cell>
+    </nb-list-item>
+  </nb-list>
+  <nb-list class="values-list alt-column">
+    <nb-list-item
+      class="list-item"
+      [class.selected]="item === getSelectedTime.alt"
+      *ngFor="let item of altColumnOptions">
+      <nb-timepicker-cell
+        [value]="item"
+        [type]="alt"
+        (select)="select($event)">
+      </nb-timepicker-cell>
+    </nb-list-item>
+  </nb-list>
+  <nb-card-footer class="actions-footer">
+    <button nbButton ghost status="primary" size="small" (click)="setCurrentTime()">NOW</button>
+    <button nbButton status="primary" size="small" (click)="saveValue()">OK</button>
+  </nb-card-footer>
+</nb-card>

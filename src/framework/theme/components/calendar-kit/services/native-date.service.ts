@@ -167,4 +167,12 @@ export class NbNativeDateService extends NbDateService<Date> {
   getWeekNumber(date: Date): number {
     return parseInt(this.datePipe.transform(date, 'w'), 10);
   }
+
+  getCurrentTime(isTwelveHourFormat: boolean): string {
+    const currentTime = this.today();
+
+    return isTwelveHourFormat ?
+      this.datePipe.transform(currentTime, 'hh:mm:a') :
+      this.datePipe.transform(currentTime, 'hh:mm:ss')
+  }
 }

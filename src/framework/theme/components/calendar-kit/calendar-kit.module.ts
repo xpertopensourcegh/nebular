@@ -31,6 +31,7 @@ import { NbCalendarWeekNumberComponent } from './components/calendar-week-number
 
 import { NbNativeDateService } from './services/native-date.service';
 import { NbCalendarYearModelService } from './services/calendar-year-model.service';
+import { NbCalendarTimeModelService } from './services/calendar-time-model.service';
 
 
 const SERVICES = [
@@ -38,6 +39,7 @@ const SERVICES = [
   DatePipe,
   NbCalendarMonthModelService,
   NbCalendarYearModelService,
+  NbCalendarTimeModelService,
 ];
 
 const COMPONENTS = [

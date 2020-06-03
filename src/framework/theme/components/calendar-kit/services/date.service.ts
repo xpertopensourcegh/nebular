@@ -181,4 +181,6 @@ export abstract class NbDateService<D> {
   abstract getId(): string;
 
   abstract getWeekNumber(date: D): number;
+
+  abstract getCurrentTime(isTwelveHourFormat: boolean): string;
 }

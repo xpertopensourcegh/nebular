@@ -171,4 +171,12 @@ export class NbMomentDateService extends NbDateService<Moment> {
   getWeekNumber(date: Moment): number {
     return date.week();
   }
+
+  getCurrentTime(isTwelveHourFormat: boolean): string {
+    const currentTime = moment();
+
+    return isTwelveHourFormat ?
+      currentTime.format('hh:mm:A') :
+      currentTime.format(currentTime, 'hh:mm:ss')
+  }
 }
