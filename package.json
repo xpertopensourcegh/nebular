@@ -92,7 +92,7 @@
     "@angular/core": "^9.0.4",
     "@angular/fire": "^6.0.0",
     "@angular/forms": "^9.0.4",
-    "@angular/localize": "^9.0.4",
+    "@angular/localize": "^9.1.9",
     "@angular/platform-browser": "^9.0.4",
     "@angular/platform-browser-dynamic": "^9.0.4",
     "@angular/router": "^9.0.4",
